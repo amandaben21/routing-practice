@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter} from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+  {/* when there's a request for a route , browers router handles all our routes for us */}
+    <BrowserRouter>
+      <App />   {/* this app is going to handle the route. this is where we handle our routes*/}
+    </BrowserRouter>
   </React.StrictMode>
 );
 
